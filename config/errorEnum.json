@@ -1,0 +1,23 @@
+{
+	"CONTENT_TYPE_NOT_JSON": {
+		"errorCode": 12,
+		"message": "The content-type header was not specified or is not application/json"
+	},
+
+	"UNKNOWN_JSON_PARSING_ERROR": {
+		"errorCode": 13,
+		"message": "An unknown error occurred while parsing JSON"
+	},
+
+	"MISSING_JSON_BODY_PARAMS": {
+		"errorCode": 14,
+		"message": "The request body JSON is missing the necessary object properties"
+	},
+
+	"INVALID_API_CREATE_PARAMS": {
+		"errorCode": 15,
+		"message": "The provided \"title\" \"author\" or \"body\" parameters are too short or too long or contain invalid characters"
+	}
+
+}
+

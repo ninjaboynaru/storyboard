@@ -1,0 +1,16 @@
+{
+	"navigation": [
+		{
+			"text": "Home",
+			"path": "/"
+		},
+		{
+			"text": "Submit",
+			"path": "/submit"
+		},
+		{
+			"text": "Account",
+			"path": "/account"
+		}
+	]
+}

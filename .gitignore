@@ -1,0 +1,5 @@
+node_modules
+googleClientId.json
+mongoConfig.json
+.DS_Store
+.DS_Store?

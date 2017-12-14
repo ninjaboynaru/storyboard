@@ -1,0 +1,19 @@
+{
+	"title": {
+		"minLength": 2,
+		"maxLength": 100
+	},
+	
+	"author": {
+		"minLength":2,
+		"maxLength":50
+	},
+	
+	"body": {
+		"minLength": 2,
+		"maxLength": 30100
+	}
+}
+
+
+
