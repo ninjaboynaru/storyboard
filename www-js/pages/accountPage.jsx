@@ -58,10 +58,10 @@ class Account extends React.Component {
 			let storiesUi = [];
 			this.state.userStories.forEach(function(currentStory, currentIndex){
 				const key = currentStory.title + currentIndex;
-				storiesUi.push(<StoryTab storyTitle={currentStory.title} storyId={currentStory.id} key={key}/>);
+				storiesUi.push(<StoryTab storyTitle={currentStory.title} storyId={currentStory.id} key={key} storyUser={currentStory.user}/>);
 			});
 
-			uiToRender = <div className='story-array'>{storiesUi}</div>
+			uiToRender = <div className='story-tab-group'>{storiesUi}</div>
 		}
 
 		return (
@@ -98,7 +98,7 @@ class Account extends React.Component {
 	}
 
 	onApiResponse(error, stories, networkError)
-	{		
+	{
 		if(error || networkError)
 		{
 			let userErrorMessage = buildUserErrorMessage(error, networkError);
@@ -116,8 +116,3 @@ class Account extends React.Component {
 
 
 export default Account;
-
-
-
-
-

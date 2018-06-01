@@ -14,7 +14,7 @@ class Footer extends React.Component {
 		const columnClass = 'footer__column';
 		const entryClass = 'footer__column__entry';
 		const titleClass = 'footer__column__title';
-		
+
 		let links = sitelinks.navigation.map(function(link, index){
 			return (
 				<Link to={link.path} className='footer__column__link' key={link.path+index}>
@@ -26,14 +26,14 @@ class Footer extends React.Component {
 
 
 		let footerColumns = [];
-		
+
 		footerColumns.push(<div key='links' className={columnClass}>{links}</div>);
-		
+
 		footerColumns.push(<div key='developer' className={columnClass}>
 				<p className={titleClass}>Thiago HPC</p>
 				<p className={entryClass}>Design</p>
 				<p className={entryClass}>Frontend</p>
-				<p className={entryClass}>Backedn</p>
+				<p className={entryClass}>Backend</p>
 			</div>);
 		footerColumns.push(<div key='stack' className={columnClass}>
 				<p className={titleClass}>Stack</p>
@@ -41,6 +41,9 @@ class Footer extends React.Component {
 				<p className={entryClass}>Node JS (Express)</p>
 				<p className={entryClass}>React</p>
 			</div>);
+		footerColumns.push(<div key='developer' className={columnClass}>
+			<a href='http://www.choxjs.com' className={titleClass}>My Portfolio - http://www.choxjs.com</a>
+		</div>);
 
 		return (
 			<div className='footer'>

@@ -15,7 +15,7 @@ class StoryTab extends React.Component {
 		return (
 			<Link to={`/story/${this.props.storyId}`} className='story-tab'>
 				<p className='story-tab__title'>{this.props.storyTitle}</p>
-				<p className='story-tab__body'>Select to Read</p>
+				<p className='story-tab__body'>{`Posted by - ${this.props.storyUser.name}`}</p>
 			</Link>
 		);
 	}
@@ -38,5 +38,3 @@ StoryTab.propTypes = {
 
 
 export default StoryTab;
-
-

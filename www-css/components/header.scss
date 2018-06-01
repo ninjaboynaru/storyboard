@@ -1,0 +1,21 @@
+.header {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: $global-padding $global-padding * 2;
+	background-color: $header-background-color;
+	border-bottom: 2px solid $color-light-gray;
+
+
+}
+.header__logo-text {
+	font-family: $brand-font-family;
+	font-size: 1.2rem;
+	font-weight: $global-weight-bold;
+	color: $color-primary;
+
+	&:hover {
+		text-shadow: 0 0 4px rgba($color-primary, 0.2);
+	}
+}

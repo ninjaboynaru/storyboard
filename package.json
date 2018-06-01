@@ -10,6 +10,8 @@
 		"start-dev": "nodemon server/server.js",
 		"build": "webpack",
 		"watch": "webpack --watch",
+		"build:css": "node-sass ./www-css/style.scss ./www/css/style.css",
+		"watch:css": "npm run build:css && npm run build:css -- --watch --recursive",
 		"lint": "eslint **/*.{js,jsx} --quiet",
 		"comb": "csscomb ./www/css --verbose"
 	},
@@ -42,6 +44,7 @@
 		"eslint-plugin-react": "^7.5.1",
 		"json-loader": "^0.5.7",
 		"mocha": "^4.0.1",
+		"node-sass": "^4.9.0",
 		"nodemon": "^1.12.1",
 		"prettier": "^1.8.2",
 		"uglifyjs-webpack-plugin": "^1.1.4",

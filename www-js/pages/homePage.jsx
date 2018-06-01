@@ -12,10 +12,10 @@ class Home extends React.Component {
 	constructor(properties) {
 		super(properties);
 		this.state = {stories:null, userErrorMessage:null}
-		
+
 		this.onApiResponse = this.onApiResponse.bind(this);
 	}
-	
+
 	render() {
 		if(this.state.userErrorMessage)
 		{
@@ -34,13 +34,13 @@ class Home extends React.Component {
 			let storiesUi = [];
 			this.state.stories.forEach(function(currentStory, currentIndex){
 				const key = currentStory.title + currentIndex;
-				storiesUi.push(<StoryTab storyTitle={currentStory.title} storyId={currentStory.id} key={key}/>);
+				storiesUi.push(<StoryTab storyTitle={currentStory.title} storyId={currentStory.id} key={key} storyUser={currentStory.user}/>);
 			});
-			
-			return <div className='story-array'>{storiesUi}</div>
+
+			return <div className='story-tab-group'>{storiesUi}</div>
 		}
 	}
-	
+
 	componentDidMount()
 	{
 		if(this.state.stories == null)
@@ -48,7 +48,7 @@ class Home extends React.Component {
 			storyBoardApi.getRandomStories(20, {fields:['title']}, this.onApiResponse);
 		}
 	}
-	
+
 	onApiResponse(error, stories, networkError)
 	{
 		if(error || networkError)
@@ -65,13 +65,3 @@ class Home extends React.Component {
 
 
 export default Home;
-
-
-
-
-
-
-
-
-
-

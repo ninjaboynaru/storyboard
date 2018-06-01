@@ -1,0 +1,53 @@
+@function strip-unit($num) {
+	@return $num / ($num * 0 + 1);
+}
+
+@function rem-calc($value, $base: 16px) {
+	$value: (strip-unit($value) / strip-unit($base)) * 1rem;
+	@return $value;
+}
+
+/*FONT - Merienda*/
+@import url('https://fonts.googleapis.com/css?family=Merienda:400,700');
+/*FONT - Berkshire Swash*/
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash');
+/*FONT - Redressed*/
+@import url('https://fonts.googleapis.com/css?family=Redressed');
+/*FONT - Lato*/
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+$color-white: #fefefe;
+$color-black: #0a0a0a;
+$color-light-gray: #e6e6e6;
+$color-medium-gray: #cacaca;
+$color-dark-gray: #8a8a8a;
+$color-primary: #A40802;
+$color-complement: #30759C;
+$color-success: #3adb76;
+$color-warning: #ffae00;
+$color-alert: #cc4b37;
+
+
+$body-background-color: $color-white;
+$body-font-color: $color-black;
+$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+
+$header-background-color: $color-white;
+
+$global-font-size: 100%;
+$global-line-height: 1.5;
+$global-margin: 1rem;
+$global-margin-small: 0.5rem;
+$global-margin-minimal: 0.2rem;
+$global-padding: 1rem;
+$global-padding-small: 0.5rem;
+$global-margin-minimal: 0.2rem;
+$global-weight-normal: normal;
+$global-weight-bold: bold;
+
+
+$site-width: rem-calc(1100);
+$site-width-narrow: rem-calc(800);
+$footer-height: rem-calc(108);
+
+$brand-font-family: 'Berkshire Swash', 'Merienda', 'Comic Sans MS', cursive, sans-serif;

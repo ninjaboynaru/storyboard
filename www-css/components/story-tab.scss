@@ -1,0 +1,28 @@
+.story-tab-group {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.story-tab {
+	margin: 0 12px;
+	margin-bottom: 32px;
+	padding: 12px;
+	text-decoration: none;
+	text-align: center;
+
+	color: black;
+	box-shadow: 0 6px 6px -4px $color-medium-gray;
+
+	flex-basis: calc(50% - 24px);
+}
+.story-tab__title {
+	margin: 0;
+	font-weight: $global-weight-bold;
+	color: $color-complement;
+}
+.story-tab__body {
+	min-height: 44px;
+	font-size: 0.8em;
+	font-weight: $global-weight-bold;
+}

@@ -32,7 +32,7 @@ before('Start database', function(done){
 });
 
 before('Start server', function(done){
-	server = app.listen(80, function(){
+	server = app.listen(8080, function(){
 		done();
 	})
 });
@@ -274,11 +274,3 @@ describe('Story GET recent, random and user stories', function(){
 		});
 	});
 });
-
-
-
-
-
-
-
-
